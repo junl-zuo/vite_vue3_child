@@ -1,6 +1,6 @@
 <template>
   <el-button type="danger" @click="handleClick">
-    <slot>Danger Button</slot>
+    <slot>Danger Button222</slot>
   </el-button>
 </template>
 
