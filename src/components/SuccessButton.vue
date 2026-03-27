@@ -1,6 +1,6 @@
 <template>
   <el-button type="success" @click="handleClick">
-    <slot>Success Button</slot>
+    <slot>Success Button545</slot>
   </el-button>
 </template>
 
