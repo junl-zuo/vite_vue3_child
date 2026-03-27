@@ -5,6 +5,7 @@
 </template>
 
 <script setup>
+// This is a test modification
 const handleClick = () => {
   console.log('Danger button clicked');
 };
