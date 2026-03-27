@@ -1,0 +1,19 @@
+name: Sync Components
+
+on:
+  repository_dispatch:
+    types: [sync-components]
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Pull subtree
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git subtree pull --prefix=src/components https://github.com/junl-zuo/vite_vue3.git main --squash
+          git push
